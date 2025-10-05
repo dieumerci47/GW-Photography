@@ -16,7 +16,7 @@ const Home = () => {
               <div className="flex flex-col justify-start md:justify-end">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                   Des images qui racontent VOTRE histoire, pas la mienne
-                </h1>
+          </h1>
                 <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
                   <Link
                     to="/galerie"
