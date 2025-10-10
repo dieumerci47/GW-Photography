@@ -4,46 +4,74 @@ import React from "react";
 
 export function Content1() {
   return (
-    <section className="px-[5%] py-10 md:py-24 lg:py-28">
-      <div className="container">
-        <div className="grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
-          <div>
-            <h2 className="heading-h2 mb-5 font-bold md:mb-6">
+    <section
+      className="px-[5%] py-16 md:py-24 lg:py-28"
+      style={{ backgroundColor: "#FAFAF9", border: "1px solid #D1C4E9" }}
+    >
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 md:gap-x-16 lg:gap-x-20">
+          {/* Colonne gauche - Texte sur fond blanc cassé */}
+          <div className="bg-#FAFAF9 p-8 md:p-12 lg:p-16 rounded-lg border border-#FAFAF9">
+            <h2
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 md:mb-8 leading-tight"
+              style={{ fontFamily: "Georgia, serif" }}
+            >
               Raconter des histoires à travers l'image
             </h2>
-            <div className="prose-base prose-p:m-0 prose-p:mb-4 prose-p:leading-[1.5]">
-              <div>
-                <p>
-                  Morbi sed imperdiet in ipsum, adipiscing elit dui lectus.
-                  Tellus id scelerisque est ultricies ultricies. Duis est sit
-                  sed leo nisl, blandit elit sagittis. Quisque tristique
-                  consequat quam sed. Nisl at scelerisque amet nulla purus
-                  habitasse.
-                </p>
-                <p>
-                  Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas
-                  condimentum mi massa. In tincidunt pharetra consectetur sed
-                  duis facilisis metus. Etiam egestas in nec sed et. Quis
-                  lobortis at sit dictum eget nibh tortor commodo cursus.
-                </p>
-                <p>
-                  Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce
-                  aliquet. Nam elementum urna nisi aliquet erat dolor enim.
-                  Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget
-                  consectetur dictum. Donec posuere pharetra odio consequat
-                  scelerisque et, nunc tortor. Nulla adipiscing erat a erat.
-                  Condimentum lorem posuere gravida enim posuere cursus diam.
-                </p>
-              </div>
+            <div className="space-y-5">
+              <p
+                className="text-black leading-relaxed text-base md:text-lg"
+                style={{ fontFamily: "Georgia, serif" }}
+              >
+                La photographie est un langage universel. Chaque image raconte
+                une histoire unique, capture un moment fugace, révèle une
+                émotion profonde. Mon travail transcende la simple
+                représentation visuelle pour créer des récits authentiques et
+                puissants.
+              </p>
+              <p
+                className="text-black leading-relaxed text-base md:text-lg"
+                style={{ fontFamily: "Georgia, serif" }}
+              >
+                Depuis des années, je poursuis une quête artistique où chaque
+                cliché devient un témoignage. Je cherche à saisir l'essence des
+                moments, à révéler la beauté dans l'ordinaire, à transformer
+                l'instant en mémoire éternelle.
+              </p>
+              <p
+                className="text-black leading-relaxed text-base md:text-lg"
+                style={{ fontFamily: "Georgia, serif" }}
+              >
+                Mon approche est simple et directe. Je ne pose pas, je capture.
+                Je ne construis pas, je découvre. Chaque photographie est un
+                fragment de vie, un dialogue silencieux entre le sujet et
+                l'objectif.
+              </p>
             </div>
           </div>
-          <div>
-            <div>
-              <img
-                src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                className="object-coverrounded-image w-full"
-                alt="Relume placeholder image"
-              />
+
+          {/* Colonne droite - Image mise en valeur */}
+          <div className="flex justify-center md:justify-start">
+            <div className="relative">
+              {/* Fond gris moyen derrière l'image */}
+              <div className="absolute inset-0 bg-gray-500 rounded-lg transform translate-x-4 translate-y-4"></div>
+
+              {/* Image principale */}
+              <div className="relative z-10">
+                <img
+                  src="/images/portrait1.jpg"
+                  className="w-full max-w-sm rounded-lg object-cover shadow-lg"
+                  alt="Portrait professionnel - GW Photographe"
+                  style={{ aspectRatio: "3/4", maxHeight: "600px" }}
+                />
+              </div>
+
+              {/* Watermark G en bas à gauche */}
+              <div className="absolute bottom-4 left-4 z-20">
+                <div className="w-8 h-8 bg-white bg-opacity-90 rounded-full flex items-center justify-center shadow-md">
+                  <span className="text-black font-bold text-sm">G</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
